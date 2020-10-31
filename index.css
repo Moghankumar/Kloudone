@@ -21,10 +21,11 @@
 .title a{
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
+    padding-left: 60px;
 }
 .content{
-    padding-left: 35%;
+    padding-left: 150px;
 }
 #options{
     background-color: black;
@@ -34,13 +35,26 @@
 #experiments{
     text-decoration: none;
     color: white;
+    padding: 10px;
+}
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    display: none;
+    
+}
+#toggle{
+    display: none;
 }
 
-@media screen and (max-width:600px){
-    .header{
-        display: flex;
-        flex-flow: row;
+@media screen and (max-width:800px) {
+    .content{
+        display: none;
     }
+    label{
+        color: white;
+    }
+    
 }
 
             /*Head1*/
