@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    
+
+    <title>Movie App</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img src="mk-logo.png" alt="Logo" id="logo"/>
+        </div>
+        
+        <form method="POST">
+            <div id="searchbar">                
+                <input id="headsearch" type="search" placeholder="Search"></input>
+                <button type="submit" id="submit" onsubmit="submit()"><i class="fa fa-search"></i></button>
+            </div>
+        </form>         
+           
+        <div class="headcontent">
+            <p id="watchlist"><i class="fa fa-bookmark"></i>WatchList</p>           
+        </div>
+        <div class="headsign">
+            <p id="signin">Sign in</p>
+        </div>
+    </div>
+    
+    
+    <script src="style.js"></script>
+</body>
+</html>
