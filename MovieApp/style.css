@@ -1,7 +1,7 @@
 /* API_KEY : 1f6091b9694f5fd0faad141515ed0f90 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@500&display=swap');
 *{
-    background-color: black;
+    background-color:black;
     font-family: 'Roboto', sans-serif;
 }
 .header{
@@ -14,6 +14,7 @@
     padding-top: 10px;
     
 }
+
 #headsearch{
    
     width: 700px;
@@ -88,4 +89,79 @@
         display: inline-flex;
     }
     
+}
+section{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+section img{
+    width: 300px;
+    transition: 250ms all;
+}
+#searchimage:hover{
+    margin-left: 0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.movie-searchable{
+    margin-top: 20px;
+    color: white;
+}
+.content{
+    border: 2px solid red;
+    height: 300px;
+    display: none;
+}
+.content-display{
+    display: block;
+}
+.contentrow1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* padding-left: 20%;
+    padding-right: 20%; */
+}
+
+.cr1 img{
+    width: 50%;
+    height: 250px;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 10px;
+}
+.cr2 img{
+    width: 50%;
+    height: 250px;    
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 10px;
+}
+.contentrow1 img:hover{
+    margin-left: 0 30px;
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}
+.contentrow2{
+    color: white;
+}
+.contentrow2-topic h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 10%;
+}
+.contentrow2-topic p{
+    font-size: 1rem;
+    margin-left: 10%;
+}
+.contentrow2-label{
+    display: flex;
+    flex-direction: row 4;
+    padding-left: 10%;
+}
+.contentrow2-label img{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
 }
