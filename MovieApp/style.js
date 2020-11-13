@@ -161,12 +161,14 @@ function createTopRate(toprate){
 
 function toprateSection(toprate){
     return toprate.map((toprate) => {
-        if(toprate.poster_path && toprate.vote_average>=6.0){
+        if(toprate.poster_path && toprate.vote_average>=8.6 && toprate.original_language=="en"){
             return `
             <div id="topratedfetch">                
-                <img id="toprate" src=${img_url + toprate.poster_path} data-movie-id={toprate.id}/><br/>
-                <p id="topratedtitle">Title :${toprate.original_title}</p><br/>
+                <img id="toprate" src=${img_url + toprate.poster_path} data-movie-id={toprate.id}/>
+                <i class="fa fa-star" style="color:orange;"> ${toprate.vote_average}</i> 
+                <p id="topratedtitle">Title :${toprate.original_title}</p>
                 <p id="topratedrelease">Release Date : ${toprate.release_date}</p>
+                <button id="watchlistbtn" type="submit"> + Watchlist</button>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" > Trailer</i>
             </div>
              `;
         }
@@ -212,12 +214,14 @@ function createUpcomeMovies(upcome){
 }
 function upcomeSection(upcome){
     return upcome.map((upcome) => {
-        if(upcome.poster_path && upcome.vote_average>=6.0 ){
+        if(upcome.poster_path && upcome.vote_average>=6.7 ){
             return `
             <div id="upcomefetch">                
-                <img id="upcomeimg" src=${img_url + upcome.poster_path} data-movie-id={upcome.id}/><br/>
-                <p id="upcometitle">Title :${upcome.original_title}</p><br/>
+                <img id="upcomeimg" src=${img_url + upcome.poster_path} data-movie-id={upcome.id}/>
+                <i class="fa fa-star" style="color:orange;"> ${upcome.vote_average}</i> 
+                <p id="upcometitle">Title :${upcome.original_title}</p>
                 <p id="upcomerelease">Release Date : ${upcome.release_date}</p>
+                <button id="watchlistbtn" type="submit"> + Watchlist</button>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" > Trailer</i>
             </div>
              `;
         }
@@ -261,14 +265,18 @@ function createNowplayVideos(nowplay){
 }
 function nowplaySection(nowplay){
     return nowplay.map((nowplay) => {
-        if(nowplay.poster_path && nowplay.vote_average>=6.5 ){
+        if(nowplay.poster_path && nowplay.vote_average>=6.5 && nowplay.popularity>500 ){
+            
             return `
-            <div id="nowplayfetch">                
-                <img id="nowplayimg" src=${img_url + nowplay.poster_path} data-movie-id={nowplay.id}/><br/>
-                <p id="nowplaytitle">Title :${nowplay.original_title}</p><br/>
+            <div id="nowplayfetch">     
+                <img id="nowplayimg" src=${img_url + nowplay.poster_path} data-movie-id={nowplay.id}/>
+                <i class="fa fa-star" style="color:orange;"> ${nowplay.vote_average}</i>       
+                <p id="nowplaytitle">Title : ${nowplay.original_title}</p>
                 <p id="nowplayrelease">Release Date : ${nowplay.release_date}</p>
+                <button id="watchlistbtn" type="submit"> + Watchlist</button>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" > Trailer</i>
             </div>
              `;
+        
         }
     })
 }
@@ -310,14 +318,43 @@ function createPopularvideo(popular){
 }
 function popularSection(popular){
     return popular.map((popular) => {
-        if(popular.poster_path && popular.vote_average>=6.8){
+        if(popular.poster_path && popular.vote_average>=7.1 && popular.title!="The SpongeBob Movie: Sponge on the Run"){
             return `
             <div id="popularfetch">                
-                <img id="popularimg" src=${img_url + popular.poster_path} data-movie-id={popular.id}/><br/>
-                <p id="populartitle">Title :${popular.original_title}</p><br/>
+                <img id="popularimg" src=${img_url + popular.poster_path} data-movie-id={popular.id}/>
+                <i class="fa fa-star" style="color:orange;"> ${popular.vote_average}</i> 
+                <p id="populartitle">Title :${popular.original_title}</p>
                 <p id="popularrelease">Release Date : ${popular.release_date}</p>
+                <button id="watchlistbtn" type="submit"> + Watchlist</button>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-play" > Trailer</i>
             </div>
              `;
         }
     })
+}
+            //SlidowShow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }

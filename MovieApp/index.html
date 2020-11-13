@@ -34,14 +34,30 @@
 
     <div class="movie-searchable"></div>
 
-    <div class="contentrow1">
-        <div class="cr1">
-            <img src="https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F48e00700-48d7-4d9b-8355-edf65fef8da5_1392x696.jpeg" alt="theinvisibleman"/>
+    <div class="slideshow-container">
+        <div class="mySlides fade">         
+          <img src="https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F48e00700-48d7-4d9b-8355-edf65fef8da5_1392x696.jpeg" style="width:100%">  
         </div>
-        <div class="cr2">
-            <img src="https://i.ytimg.com/vi/K61-tK7Xlzg/maxresdefault.jpg" alt="joker"/>
+        
+        <div class="mySlides fade">          
+          <img src="https://i.ytimg.com/vi/K61-tK7Xlzg/maxresdefault.jpg" style="width:90%; margin-left: 10%;">          
         </div>
+        
+        <div class="mySlides fade">         
+          <img src="https://c4.wallpaperflare.com/wallpaper/844/679/745/300-movie-leonidas-1280x800-entertainment-movies-hd-art-wallpaper-preview.jpg" style="width:80%;margin-left: 10%;">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
     </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
     <div class="nowplay" id="nowplay">
         <div class="nowplay-topics">
             <h2 style="color: orange;"> | Now Playing</h2>
@@ -76,6 +92,7 @@
         </div>
         <div class="populat-content"></div>
     </div>
+    <br/>
 
     <div class="footer">
         <div class="footer-row1">
