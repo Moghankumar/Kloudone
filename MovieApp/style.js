@@ -265,11 +265,11 @@ function createNowplayVideos(nowplay){
 }
 function nowplaySection(nowplay){
     return nowplay.map((nowplay) => {
-        if(nowplay.poster_path && nowplay.vote_average>=6.5 && nowplay.popularity>500 ){
+        if(nowplay.poster_path && nowplay.vote_average>=6.4 && nowplay.popularity>500 ){
             
             return `
             <div id="nowplayfetch">     
-                <img id="nowplayimg" src=${img_url + nowplay.poster_path} data-movie-id={nowplay.id}/>
+                <img id="nowplayimg" src=${img_url + nowplay.poster_path} data-movie-id={nowplay.id}/><br/>
                 <i class="fa fa-star" style="color:orange;"> ${nowplay.vote_average}</i>       
                 <p id="nowplaytitle">Title : ${nowplay.original_title}</p>
                 <p id="nowplayrelease">Release Date : ${nowplay.release_date}</p>
@@ -282,7 +282,7 @@ function nowplaySection(nowplay){
 }
             //PopularMovies
 const popularElement=document.getElementById("popularmovie");
-const popularcontent=document.querySelector('.popular-topic');
+const popularcontent=document.querySelector('.popular-content');
 
 popularElement.onclick=function(event){
     event.preventDefault();
@@ -318,7 +318,7 @@ function createPopularvideo(popular){
 }
 function popularSection(popular){
     return popular.map((popular) => {
-        if(popular.poster_path && popular.vote_average>=7.1 && popular.title!="The SpongeBob Movie: Sponge on the Run"){
+        if(popular.poster_path && popular.vote_average>=7.2 && popular.title!="The SpongeBob Movie: Sponge on the Run"){
             return `
             <div id="popularfetch">                
                 <img id="popularimg" src=${img_url + popular.poster_path} data-movie-id={popular.id}/>

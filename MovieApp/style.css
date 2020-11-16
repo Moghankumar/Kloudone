@@ -107,8 +107,8 @@ img {vertical-align: middle;}
     }
     #logo{
         width: 60px;
-        padding-left:20px;
-        padding-top: 10px;    
+        padding-left:30px;
+        padding-top: 30px;    
     }
     #headsearch{   
         width: 120px;
@@ -131,6 +131,11 @@ img {vertical-align: middle;}
         
         padding-top: 15px;
         display: inline-flex;
+    }
+    #signin{
+        color: white;
+        padding-left: 120%;    
+      
     }
     
 }
@@ -209,6 +214,34 @@ section img{
     display: block;
     background-color:#313131; 
 }
+@media only screen and (max-width:800px){
+    .topratedmovie{
+        color: white;
+        padding-left: 20px;
+    }
+    #toprate{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        justify-content: space-between !important;
+        padding-right: 10px;
+    }
+    #topratedtitle{
+        font-size:medium;
+        background-color: #313131;
+    }
+    #topratedrelease{
+        font-size: small;
+        padding: -30px;
+        background-color: #313131;
+    }
+    .topratedmovie h2,h3{
+        font-size: medium;
+    }
+
+}
+
+
 .upcomingmovie-topic {
     color: white;
 }
@@ -236,6 +269,33 @@ section img{
 #upcomefetch i{
     background-color: #313131;
 }
+@media only screen and (max-width:800px){
+    .upcomingmovies{
+        color: white;
+        padding-left: 20px;
+    }
+    #upcomeimg{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        justify-content: space-between !important;
+        padding-right: 5px;
+    }
+    #upcometitle{
+        background-color: #313131;
+        font-size: medium;
+    }
+    #upcomerelease{
+        background-color: #313131;
+        font-size: small;
+    }
+    .upcomingmovies h2,h3{
+        font-size: medium;
+    }
+
+}
+
+
 #nowplay{
     color: white;
     padding-left: 50px;
@@ -245,6 +305,7 @@ section img{
     height: 220px;
     cursor: pointer;
     justify-content: space-around !important;
+    
 }
 #nowplayfetch{
     display: block;
@@ -260,6 +321,31 @@ section img{
 #nowplayrelease{
     background-color: #313131;
 }
+@media only screen and (max-width:800px){
+    #nowplay{
+        color: white;
+        padding-left: 20px;
+    }
+    #nowplayimg{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        justify-content: space-around !important; 
+      
+    }
+    #nowplaytitle{
+        background-color: #313131;
+        font-size: medium;
+    }
+    #nowplayrelease{
+        background-color: #313131;
+        font-size: small;
+    }
+    #nowplay h2,h3{
+        font-size: medium;
+    }
+}
+
 
 #watchlistbtn{
     color: #7EC0EE;
@@ -296,6 +382,34 @@ section img{
 #popularrelease{
     background-color: #313131;
 }
+@media only screen and (max-width:800px){
+    .popularmovie{
+        color: white;
+        padding-left: 20px;
+    }
+    #popularimg{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        justify-content: space-between !important;
+        padding-right: 10px;
+    }
+    #populartitle{
+        background-color: #313131;
+        font-size: medium;
+    }
+    #popularrelease{
+        background-color: #313131;
+        font-size: small;
+    }
+    .popularmovie h2,h3{
+        font-size: medium;
+    }
+    
+
+}
+
+
 .footer{
     color: white;
     align-items: center;
@@ -340,4 +454,46 @@ section img{
 .footer-row5{
     color: white;
     margin-left: 42%;
+}
+#content-close{
+    cursor: pointer;
+}
+@media only screen and (max-width:800px){
+    .footer-row1{
+        padding-left: 30%;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .footer-row1 i{
+        font-size: medium;
+    }
+    .footer-row2{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        margin-left: -40px;
+    }
+    .footer-row2 a{
+        font-size: small;
+    }
+    .footer-row3{
+        display: flex;
+        flex-direction: row;
+        margin-left: -15px;
+        color: white;
+    }
+    .footer-row3 a{
+        font-size: small;
+    }
+    .footer-row4 p{
+        margin-left: 34%;
+        font-size: small;
+    }
+    .footer-row5{
+        color: white;
+        margin-left: 28%;
+        font-size: small;
+    }
+
 }
