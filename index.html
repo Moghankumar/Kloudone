@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Facebook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Facebook</h2>
+        </div>
+        <div class="body">
+            <div class="post-article">
+                <div class="title-article">
+                    <input type="text" placeholder="Enter Article Title" id="title-article" class="titlearticle"/>
+                </div>
+                <div class="content-article">
+                    <input type="text" placeholder="Enter content" id="content-article" class="contentarticle"/>
+                </div>
+                <div class="dropdown-article">
+                    <form>
+                        <select id="dropdown" name="dropdown" class="dropdown">
+                            <option value="newarticle" class="newart" id="newart">New Article</option>
+                            <option value="funarticle" class="funart" id="funart">Fun Article</option>
+                        </select> &nbsp; &nbsp;
+                        
+                            <input type="submit" id="post" value="Post Button"></input>
+                    </form>
+                    
+                </div>
+                <br/>
+            </div>
+            <div class="new-articles">
+                <div class="new-artcontent">
+                    <div class="new-contimg">
+                        <img src="http://lorempixel.com/400/200/" id="new-artimg"/>
+                    </div>
+                    <div class="new-cont">
+                        <h3 id="newtitle" class="newtitle">Title</h3>
+                        <p id="newcontent">Content</p>
+                    </div>                  
+                    
+                </div>
+            </div>
+            <div class="fun-calcul">
+                <div class="calcul">
+                    <h3 class="calcnew">Number of New Articles</h3>
+                    <h3 class="calcfun">Number of Fun Articles</h3>
+                </div>
+                <div class="fun-articles">
+                    <div class="fun-artcontent">
+                        <div class="fun-img">
+                            <img src="http://lorempixel.com/400/200/sports/2/" id="fun-artimg"/>
+                        </div>
+                    </div>
+                    <div class="fun-cont">
+                        <h3 id="funtitle">Title</h3>
+                        <p id="funcontent">Content</p>
+                    </div><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
